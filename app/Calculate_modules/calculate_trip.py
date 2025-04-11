@@ -41,7 +41,8 @@ def calculate_trip(customers: List[Customer],
                          * Decimal(customer.car.fuel_consumption / 100))
             fuel_cost = (Decimal(fuel_used)
                          * Decimal(fuel_price))
-            fuel_sum[shop.name] = float(round(fuel_cost, 2)) * 2
+            total_fuel = fuel_cost * 2
+            fuel_sum[shop.name] = float(round(total_fuel, 2))
 
         total_trip_cost = {
             shop_name: Decimal(total_price[shop_name])
